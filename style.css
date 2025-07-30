@@ -1,21 +1,93 @@
 body {
-  font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif; /* Keep Inter for body for readability */
+    background-color: #f9fafb; /* tailwind's gray-50 */
+    color: #111827; /* tailwind's gray-900 */
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Great Vibes", cursive;
+h1, h2, h3, h4 {
+    font-family: 'Great Vibes', cursive;
 }
 
+/* Hero Section */
 .hero-bg {
-  background-image: url("https://scontent-den2-1.xx.fbcdn.net/v/t1.6435-9/51443377_2502050489866597_8121246453327724544_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=uCVIxFYWd14Q7kNvwG_h7XG&_nc_oc=AdnX24YAzyRtMZ51-HLqwESqO1TrOLYcK2cbMTJFudL6WUvYtpJCgEWEUvJvzd4VPBM&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=xpTg8TtISfcjqG9qO2aVQg&oh=00_AfRc6BSQ36eTNm-to51zgHzmvMFHxdrf93JhiMnfHYzmnA&oe=68B20152");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('https://scontent-den2-1.xx.fbcdn.net/v/t1.6435-9/51443377_2502050489866597_8121246453327724544_n.jpg?...');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-bg * {
+    position: relative;
+    z-index: 2;
 }
 
 .text-shadow-sm {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
+/* Nav Hover */
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f0c05a;
+    text-decoration: underline;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-size: 1.125rem;
+    color: #E5E7EB;
+    margin-bottom: -0.5rem;
+}
+
+form input,
+form textarea {
+    padding: 0.75rem;
+    border: 1px solid #4B5563;
+    border-radius: 0.5rem;
+    background-color: #374151;
+    color: #F9FAFB;
+    width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #60A5FA;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    background: #f0c05a;
+    color: #1F2937;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0
