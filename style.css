@@ -1,7 +1,7 @@
 body {
-    font-family: 'Inter', sans-serif; /* Keep Inter for body for readability */
-    background-color: #f9fafb; /* tailwind's gray-50 */
-    color: #111827; /* tailwind's gray-900 */
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb; /* Tailwind's gray-50 */
+    color: #111827; /* Tailwind's gray-900 */
 }
 
 h1, h2, h3, h4 {
@@ -10,7 +10,7 @@ h1, h2, h3, h4 {
 
 /* Hero Section */
 .hero-bg {
-    background-image: url('https://scontent-den2-1.xx.fbcdn.net/v/t1.6435-9/51443377_2502050489866597_8121246453327724544_n.jpg?...');
+    background-image: url('https://scontent-den2-1.xx.fbcdn.net/v/t1.6435-9/51443377_2502050489866597_8121246453327724544_n.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,11 +33,12 @@ h1, h2, h3, h4 {
     z-index: 2;
 }
 
+/* Text Shadow Utility */
 .text-shadow-sm {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Nav Hover */
+/* Nav Link Styles */
 nav a {
     text-decoration: none;
     transition: color 0.3s ease;
@@ -48,7 +49,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Contact Form */
+/* Contact Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -60,34 +61,40 @@ form {
 
 form label {
     font-size: 1.125rem;
-    color: #E5E7EB;
+    color: #E5E7EB; /* Tailwind gray-200 */
     margin-bottom: -0.5rem;
 }
 
 form input,
 form textarea {
     padding: 0.75rem;
-    border: 1px solid #4B5563;
+    border: 1px solid #4B5563; /* Tailwind gray-600 */
     border-radius: 0.5rem;
-    background-color: #374151;
-    color: #F9FAFB;
+    background-color: #374151; /* Tailwind gray-700 */
+    color: #F9FAFB; /* Tailwind gray-50 */
     width: 100%;
 }
 
 form input:focus,
 form textarea:focus {
     outline: none;
-    border-color: #60A5FA;
+    border-color: #60A5FA; /* Tailwind blue-400 */
     box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
 }
 
 form button {
     padding: 0.75rem 1.5rem;
     background: #f0c05a;
-    color: #1F2937;
+    color: #1F2937; /* Tailwind gray-900 */
     font-weight: 700;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form button:hover {
+    background: #e0b050;
+    transform: translateY(-2px);
+}
